@@ -1,0 +1,11 @@
+.row {
+    display: flex;
+}
+
+.first {
+    flex: 70%;
+}
+
+.second {
+    flex: 30%;
+}
