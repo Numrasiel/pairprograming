@@ -1,16 +1,24 @@
 import {async, TestBed} from '@angular/core/testing';
 import {RouterTestingModule} from '@angular/router/testing';
 import {AppComponent} from './app.component';
+import { UserListComponent } from './user-list/user-list.component';
+import { UserDetailComponent } from './user-detail/user-detail.component';
+import { UserService } from '../services/user.service';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('AppComponent', () => {
     beforeEach(async(() => {
         TestBed.configureTestingModule({
             imports: [
-                RouterTestingModule
+                RouterTestingModule,
+                HttpClientTestingModule
             ],
             declarations: [
-                AppComponent
-            ]
+                AppComponent,
+                UserListComponent,
+                UserDetailComponent
+            ],
+            providers:[UserService]
         }).compileComponents();
     }));
 

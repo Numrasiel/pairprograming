@@ -1,0 +1,7 @@
+<p>User List</p>
+
+<ul>
+    <li *ngFor="let user of users|async" (click)="viewUserDetails(user)">
+        {{ user.name }}
+    </li>
+</ul>
